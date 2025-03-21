@@ -1,39 +1,39 @@
-﻿namespace MediatorDP
-{
-	public class User
-	{
-		public string Name { get; }
+﻿//namespace MediatorDP
+//{
+//	public class User
+//	{
+//		public string Name { get; }
 
-		public User(string name)
-		{
-			Name = name;
-		}
+//		public User(string name)
+//		{
+//			Name = name;
+//		}
 
-		public void SendMessage(string message, User recipient)
-		{
-			Console.WriteLine($"{Name} sends: {message}");
-			recipient.ReceiveMessage(message, this);
-		}
+//		public void SendMessage(string message, User recipient)
+//		{
+//			Console.WriteLine($"{Name} sends: {message}");
+//			recipient.ReceiveMessage(message, this);
+//		}
 
-		public void ReceiveMessage(string message, User sender)
-		{
-			Console.WriteLine($"{Name} receives from {sender.Name}: {message}");
-		}
-//		Problems with This Approach:
-		//Tight Coupling:
+//		public void ReceiveMessage(string message, User sender)
+//		{
+//			Console.WriteLine($"{Name} receives from {sender.Name}: {message}");
+//		}
+////		Problems with This Approach:
+//		//Tight Coupling:
 
-		//Each User object needs to know about other User objects to send messages.
+//		//Each User object needs to know about other User objects to send messages.
 
-		//Scalability Issues:
+//		//Scalability Issues:
 
-		//Adding new users or features(e.g., group chats) becomes difficult.
+//		//Adding new users or features(e.g., group chats) becomes difficult.
 
-		//Violation of Single Responsibility Principle:
+//		//Violation of Single Responsibility Principle:
 
-		//The User class is responsible for both sending and receiving messages.
+//		//The User class is responsible for both sending and receiving messages.
 
-		//Hard to Test:
+//		//Hard to Test:
 
-		//Testing the User class requires mocking or creating multiple User objects.
-	}
-}
+//		//Testing the User class requires mocking or creating multiple User objects.
+//	}
+//}
